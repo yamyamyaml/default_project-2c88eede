@@ -1,0 +1,29 @@
+{
+  "key": "nonFunctionsList",
+  "value": [
+    {
+      "id": "NON-001",
+      "category": "非機能要件",
+      "non_function_name": "UI/UX設計",
+      "description": "ユーザーフレンドリーなUI/UX設計"
+    },
+    {
+      "id": "NON-002",
+      "category": "非機能要件",
+      "non_function_name": "データセキュリティ",
+      "description": "データセキュリティの確保（暗号化、アクセス権管理）"
+    },
+    {
+      "id": "NON-003",
+      "category": "非機能要件",
+      "non_function_name": "システム可用性と拡張性",
+      "description": "高いシステム可用性と拡張性"
+    },
+    {
+      "id": "NON-004",
+      "category": "非機能要件",
+      "non_function_name": "システム基盤",
+      "description": "クラウドベースまたはオンプレミスの選択肢"
+    }
+  ]
+}

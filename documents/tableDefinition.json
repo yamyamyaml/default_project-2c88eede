@@ -1,0 +1,625 @@
+{
+  "key": "tableDefinition",
+  "value": [
+    {
+      "id": "TAB-001",
+      "table": "customers",
+      "column": "customer_id",
+      "dataType": "INT",
+      "regulation": "PK",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "顧客ID（主キー）"
+    },
+    {
+      "id": "TAB-002",
+      "table": "customers",
+      "column": "customer_code",
+      "dataType": "VARCHAR(20)",
+      "regulation": "UK",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "顧客コード（得意先CD）"
+    },
+    {
+      "id": "TAB-003",
+      "table": "customers",
+      "column": "name",
+      "dataType": "VARCHAR(100)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "顧客名（得意先名）"
+    },
+    {
+      "id": "TAB-004",
+      "table": "customers",
+      "column": "furigana",
+      "dataType": "VARCHAR(100)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "フリガナ"
+    },
+    {
+      "id": "TAB-005",
+      "table": "customers",
+      "column": "gender",
+      "dataType": "ENUM('男性', '女性')",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "性別"
+    },
+    {
+      "id": "TAB-006",
+      "table": "customers",
+      "column": "birth_date",
+      "dataType": "DATE",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "生年月日"
+    },
+    {
+      "id": "TAB-007",
+      "table": "customers",
+      "column": "age",
+      "dataType": "INT",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "年齢（生年月日から計算）"
+    },
+    {
+      "id": "TAB-008",
+      "table": "customers",
+      "column": "organization_name",
+      "dataType": "VARCHAR(100)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "所属名"
+    },
+    {
+      "id": "TAB-009",
+      "table": "customers",
+      "column": "representative_name",
+      "dataType": "VARCHAR(100)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "担当者名"
+    },
+    {
+      "id": "TAB-010",
+      "table": "customers",
+      "column": "job_title",
+      "dataType": "VARCHAR(50)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "職種"
+    },
+    {
+      "id": "TAB-011",
+      "table": "customers",
+      "column": "postal_code",
+      "dataType": "VARCHAR(10)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "郵便番号"
+    },
+    {
+      "id": "TAB-012",
+      "table": "customers",
+      "column": "address1",
+      "dataType": "VARCHAR(200)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "住所1"
+    },
+    {
+      "id": "TAB-013",
+      "table": "customers",
+      "column": "address2",
+      "dataType": "VARCHAR(200)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "住所2"
+    },
+    {
+      "id": "TAB-014",
+      "table": "customers",
+      "column": "email",
+      "dataType": "VARCHAR(100)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "メールアドレス"
+    },
+    {
+      "id": "TAB-015",
+      "table": "customers",
+      "column": "phone",
+      "dataType": "VARCHAR(20)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "電話/携帯番号"
+    },
+    {
+      "id": "TAB-016",
+      "table": "customers",
+      "column": "notes",
+      "dataType": "TEXT",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "メモ情報"
+    },
+    {
+      "id": "TAB-017",
+      "table": "customers",
+      "column": "warning_flag",
+      "dataType": "BOOLEAN",
+      "regulation": null,
+      "defaultValue": "false",
+      "foreignKey": null,
+      "description": "要注意フラグ（デフォルト: false）"
+    },
+    {
+      "id": "TAB-018",
+      "table": "subscriptions",
+      "column": "subscription_id",
+      "dataType": "INT",
+      "regulation": "PK",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "契約ID（主キー）"
+    },
+    {
+      "id": "TAB-019",
+      "table": "subscriptions",
+      "column": "customer_id",
+      "dataType": "INT",
+      "regulation": "FK",
+      "defaultValue": null,
+      "foreignKey": "customers(customer_id)",
+      "description": "顧客ID（外部キー）"
+    },
+    {
+      "id": "TAB-020",
+      "table": "subscriptions",
+      "column": "contract_no",
+      "dataType": "VARCHAR(20)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "契約番号（契約No）"
+    },
+    {
+      "id": "TAB-021",
+      "table": "subscriptions",
+      "column": "contract_date",
+      "dataType": "DATE",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "契約日"
+    },
+    {
+      "id": "TAB-022",
+      "table": "subscriptions",
+      "column": "initial_register_date",
+      "dataType": "DATE",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "初回登録日"
+    },
+    {
+      "id": "TAB-023",
+      "table": "subscriptions",
+      "column": "field_category",
+      "dataType": "VARCHAR(50)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "分野"
+    },
+    {
+      "id": "TAB-024",
+      "table": "subscriptions",
+      "column": "product_code",
+      "dataType": "VARCHAR(20)",
+      "regulation": "FK",
+      "defaultValue": null,
+      "foreignKey": "products(product_code)",
+      "description": "商品コード"
+    },
+    {
+      "id": "TAB-025",
+      "table": "subscriptions",
+      "column": "start_issue_no",
+      "dataType": "VARCHAR(20)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "開始号数"
+    },
+    {
+      "id": "TAB-026",
+      "table": "subscriptions",
+      "column": "end_issue_no",
+      "dataType": "VARCHAR(20)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "終了号数"
+    },
+    {
+      "id": "TAB-027",
+      "table": "subscriptions",
+      "column": "total_issues",
+      "dataType": "INT",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "契約回数"
+    },
+    {
+      "id": "TAB-028",
+      "table": "subscriptions",
+      "column": "sent_issues",
+      "dataType": "INT",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "送付済み数"
+    },
+    {
+      "id": "TAB-029",
+      "table": "subscriptions",
+      "column": "remaining_issues",
+      "dataType": "INT",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "残回数（自動計算）"
+    },
+    {
+      "id": "TAB-030",
+      "table": "subscriptions",
+      "column": "last_sent_issue_no",
+      "dataType": "VARCHAR(20)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "最終発送号数"
+    },
+    {
+      "id": "TAB-031",
+      "table": "subscriptions",
+      "column": "continuation_flag",
+      "dataType": "BOOLEAN",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "継続契約フラグ"
+    },
+    {
+      "id": "TAB-032",
+      "table": "subscriptions",
+      "column": "application_method",
+      "dataType": "VARCHAR(50)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "申込方法"
+    },
+    {
+      "id": "TAB-033",
+      "table": "subscriptions",
+      "column": "payment_method",
+      "dataType": "VARCHAR(50)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "決済方法"
+    },
+    {
+      "id": "TAB-034",
+      "table": "subscriptions",
+      "column": "contract_pattern",
+      "dataType": "VARCHAR(50)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "契約パターン"
+    },
+    {
+      "id": "TAB-035",
+      "table": "subscriptions",
+      "column": "expected_payment_date",
+      "dataType": "DATE",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "入金予定日"
+    },
+    {
+      "id": "TAB-036",
+      "table": "subscriptions",
+      "column": "confirmed_payment_date",
+      "dataType": "DATE",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "入金確定日"
+    },
+    {
+      "id": "TAB-037",
+      "table": "subscriptions",
+      "column": "cancellation_type",
+      "dataType": "VARCHAR(50)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "解約区分"
+    },
+    {
+      "id": "TAB-038",
+      "table": "subscriptions",
+      "column": "gift_shipping_flag",
+      "dataType": "BOOLEAN",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "贈呈発送有無"
+    },
+    {
+      "id": "TAB-039",
+      "table": "subscriptions",
+      "column": "renewal_notice_flag",
+      "dataType": "BOOLEAN",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "継続案内有無"
+    },
+    {
+      "id": "TAB-040",
+      "table": "pricing",
+      "column": "pricing_id",
+      "dataType": "INT",
+      "regulation": "PK",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "金額ID（主キー）"
+    },
+    {
+      "id": "TAB-041",
+      "table": "pricing",
+      "column": "subscription_id",
+      "dataType": "INT",
+      "regulation": "FK",
+      "defaultValue": null,
+      "foreignKey": "subscriptions(subscription_id)",
+      "description": "契約ID（外部キー）"
+    },
+    {
+      "id": "TAB-042",
+      "table": "pricing",
+      "column": "set_price",
+      "dataType": "DECIMAL(10,2)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "セット価格"
+    },
+    {
+      "id": "TAB-043",
+      "table": "pricing",
+      "column": "set_quantity",
+      "dataType": "INT",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "セット数量"
+    },
+    {
+      "id": "TAB-044",
+      "table": "pricing",
+      "column": "total_amount",
+      "dataType": "DECIMAL(10,2)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "合計金額"
+    },
+    {
+      "id": "TAB-045",
+      "table": "pricing",
+      "column": "tax_amount",
+      "dataType": "DECIMAL(10,2)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "税額"
+    },
+    {
+      "id": "TAB-046",
+      "table": "pricing",
+      "column": "tax_inclusive_total",
+      "dataType": "DECIMAL(10,2)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "税込み金額（自動計算）"
+    },
+    {
+      "id": "TAB-047",
+      "table": "pricing",
+      "column": "warehouse_info",
+      "dataType": "VARCHAR(50)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "出庫倉庫"
+    },
+    {
+      "id": "TAB-048",
+      "table": "billing_addresses",
+      "column": "billing_id",
+      "dataType": "INT",
+      "regulation": "PK",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "請求先ID（主キー）"
+    },
+    {
+      "id": "TAB-049",
+      "table": "billing_addresses",
+      "column": "customer_id",
+      "dataType": "INT",
+      "regulation": "FK",
+      "defaultValue": null,
+      "foreignKey": "customers(customer_id)",
+      "description": "顧客ID（外部キー）"
+    },
+    {
+      "id": "TAB-050",
+      "table": "billing_addresses",
+      "column": "billing_code",
+      "dataType": "VARCHAR(20)",
+      "regulation": "UK",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "請求先コード（請求先CD）"
+    },
+    {
+      "id": "TAB-051",
+      "table": "billing_addresses",
+      "column": "billing_name",
+      "dataType": "VARCHAR(100)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "請求先名"
+    },
+    {
+      "id": "TAB-052",
+      "table": "billing_addresses",
+      "column": "organization_name",
+      "dataType": "VARCHAR(100)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "所属名"
+    },
+    {
+      "id": "TAB-053",
+      "table": "billing_addresses",
+      "column": "representative_name",
+      "dataType": "VARCHAR(100)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "担当者名"
+    },
+    {
+      "id": "TAB-054",
+      "table": "billing_addresses",
+      "column": "postal_code",
+      "dataType": "VARCHAR(10)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "郵便番号"
+    },
+    {
+      "id": "TAB-055",
+      "table": "billing_addresses",
+      "column": "address1",
+      "dataType": "VARCHAR(200)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "住所1"
+    },
+    {
+      "id": "TAB-056",
+      "table": "billing_addresses",
+      "column": "address2",
+      "dataType": "VARCHAR(200)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "住所2"
+    },
+    {
+      "id": "TAB-057",
+      "table": "billing_addresses",
+      "column": "phone",
+      "dataType": "VARCHAR(20)",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "電話/携帯番号"
+    },
+    {
+      "id": "TAB-058",
+      "table": "products",
+      "column": "product_code",
+      "dataType": "VARCHAR(20)",
+      "regulation": "PK",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "商品コード（主キー）"
+    },
+    {
+      "id": "TAB-059",
+      "table": "products",
+      "column": "product_name",
+      "dataType": "VARCHAR(100)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "商品名"
+    },
+    {
+      "id": "TAB-060",
+      "table": "products",
+      "column": "product_description",
+      "dataType": "TEXT",
+      "regulation": null,
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "商品説明"
+    },
+    {
+      "id": "TAB-061",
+      "table": "products",
+      "column": "unit_price",
+      "dataType": "DECIMAL(10,2)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "単価"
+    },
+    {
+      "id": "TAB-062",
+      "table": "products",
+      "column": "tax_rate",
+      "dataType": "DECIMAL(3,2)",
+      "regulation": "必須",
+      "defaultValue": null,
+      "foreignKey": null,
+      "description": "税率"
+    }
+  ]
+}

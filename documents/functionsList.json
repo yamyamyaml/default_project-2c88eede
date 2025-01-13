@@ -1,0 +1,293 @@
+{
+  "key": "functionsList",
+  "value": [
+    {
+      "id": "FUN-001",
+      "category": "契約管理",
+      "function_name": "顧客情報登録",
+      "description": "新規顧客情報をシステムに登録する機能。",
+      "input": "顧客情報（氏名、住所、連絡先等）",
+      "output": "顧客ID",
+      "user": "契約担当者"
+    },
+    {
+      "id": "FUN-002",
+      "category": "契約管理",
+      "function_name": "新規契約登録",
+      "description": "顧客と契約内容（購読開始日、終了日、請求パターン）をシステムに登録する機能。",
+      "input": "顧客ID、購読開始日、終了日、請求パターン",
+      "output": "契約ID",
+      "user": "契約担当者"
+    },
+    {
+      "id": "FUN-003",
+      "category": "契約管理",
+      "function_name": "契約更新案内書類生成",
+      "description": "最終号発行スケジュールに基づき、継続案内書類を生成する機能。",
+      "input": "契約ID",
+      "output": "継続案内書類",
+      "user": "契約担当者"
+    },
+    {
+      "id": "FUN-004",
+      "category": "契約管理",
+      "function_name": "契約更新登録",
+      "description": "顧客からの連絡に基づき、契約情報を更新し、次期契約期間を自動生成する機能。",
+      "input": "契約ID、更新契約情報",
+      "output": "更新された契約ID、次期契約期間",
+      "user": "契約担当者"
+    },
+    {
+      "id": "FUN-005",
+      "category": "契約管理",
+      "function_name": "契約情報検索",
+      "description": "契約者情報や契約内容の詳細を検索する機能。",
+      "input": "検索条件（顧客ID、契約IDなど）",
+      "output": "契約情報一覧",
+      "user": "契約担当者"
+    },
+    {
+      "id": "FUN-006",
+      "category": "契約管理",
+      "function_name": "契約情報一覧表示",
+      "description": "契約情報を一覧表示する機能。",
+      "input": "表示条件",
+      "output": "契約情報一覧",
+      "user": "契約担当者"
+    },
+    {
+      "id": "FUN-007",
+      "category": "契約管理",
+      "function_name": "契約チェックリスト生成",
+      "description": "契約の整合性を確認するためのチェックリストを生成する機能。",
+      "input": "契約ID",
+      "output": "契約チェックリスト",
+      "user": "契約担当者"
+    },
+    {
+      "id": "FUN-008",
+      "category": "請求管理",
+      "function_name": "請求書自動生成",
+      "description": "請求方式（前金、都度、完納）に応じて請求書を自動生成する機能。",
+      "input": "契約ID、請求方式",
+      "output": "請求書データ",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-009",
+      "category": "請求管理",
+      "function_name": "請求書送付記録更新",
+      "description": "請求書の送付記録を更新する機能。",
+      "input": "請求書ID",
+      "output": "なし",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-010",
+      "category": "請求管理",
+      "function_name": "分割請求設定",
+      "description": "契約期間内の分割請求設定を管理する機能。",
+      "input": "契約ID、分割請求設定",
+      "output": "分割請求設定情報",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-011",
+      "category": "請求管理",
+      "function_name": "特別請求管理",
+      "description": "顧客の会計期間に応じた特別請求を管理する機能。",
+      "input": "契約ID、特別請求設定",
+      "output": "特別請求情報",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-012",
+      "category": "請求管理",
+      "function_name": "未入金一覧表示",
+      "description": "未入金状況の一覧を表示する機能。",
+      "input": "表示条件",
+      "output": "未入金一覧",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-013",
+      "category": "請求管理",
+      "function_name": "入金データ自動消込",
+      "description": "入金データを自動で消込処理する機能。銀行振込CSVを取り込んで、未入金候補と比較することも可能",
+      "input": "入金データ",
+      "output": "消込結果",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-014",
+      "category": "請求管理",
+      "function_name": "消込承認",
+      "description": "消込処理を確認後に承認する機能。",
+      "input": "消込候補",
+      "output": "消込完了",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-015",
+      "category": "請求管理",
+      "function_name": "入金履歴管理",
+      "description": "入金履歴を管理する機能。",
+      "input": "契約ID",
+      "output": "入金履歴",
+      "user": "請求担当者"
+    },
+    {
+      "id": "FUN-016",
+      "category": "発行スケジュール管理",
+      "function_name": "発行予定登録",
+      "description": "雑誌発行スケジュール（号数、発行予定日）を契約に紐づけて登録する機能。",
+      "input": "契約ID、号数、発行予定日",
+      "output": "発行予定ID",
+      "user": "発送担当者"
+    },
+    {
+      "id": "FUN-017",
+      "category": "発行スケジュール管理",
+      "function_name": "発行実績記録",
+      "description": "発行日や発送完了情報を更新する機能。",
+      "input": "発行予定ID, 発行日、発送完了情報",
+      "output": "なし",
+      "user": "発送担当者"
+    },
+    {
+      "id": "FUN-018",
+      "category": "発行スケジュール管理",
+      "function_name": "未発行管理",
+      "description": "未発行分の管理を行う機能。",
+      "input": "契約ID",
+      "output": "未発行情報",
+      "user": "発送担当者"
+    },
+    {
+      "id": "FUN-019",
+      "category": "発行スケジュール管理",
+      "function_name": "次期契約への繰越対応",
+      "description": "未発行分の次期契約への繰越対応を行う機能。",
+      "input": "契約ID、未発行情報",
+      "output": "繰越情報",
+      "user": "発送担当者"
+    },
+    {
+      "id": "FUN-020",
+      "category": "発送管理",
+      "function_name": "発送リスト生成",
+      "description": "発行スケジュールに基づいて発送リストを生成する機能。",
+      "input": "発行スケジュール",
+      "output": "発送リスト",
+      "user": "発送担当者"
+    },
+    {
+      "id": "FUN-021",
+      "category": "発送管理",
+      "function_name": "未発送リスト確認",
+      "description": "未発送リストを確認する機能。",
+      "input": "表示条件",
+      "output": "未発送リスト",
+      "user": "発送担当者"
+    },
+    {
+      "id": "FUN-022",
+      "category": "発送管理",
+      "function_name": "再発送指示",
+      "description": "再発送指示を実行する機能。",
+      "input": "発送ID",
+      "output": "なし",
+      "user": "発送担当者"
+    },
+    {
+      "id": "FUN-023",
+      "category": "レポートとデータ出力",
+      "function_name": "レポートデータ出力",
+      "description": "契約者一覧表、売上一覧表、入金集計表などのレポートをCSV形式で出力する機能。",
+      "input": "レポート種別、出力条件",
+      "output": "レポートデータ（CSV）",
+      "user": "定期購読管理システムの管理者"
+    },
+    {
+      "id": "FUN-024",
+      "category": "レポートとデータ出力",
+      "function_name": "ラベルデータ出力",
+      "description": "発送用ラベルデータを出力する機能。",
+      "input": "出力条件",
+      "output": "ラベルデータ",
+      "user": "定期購読管理システムの管理者"
+    },
+    {
+      "id": "FUN-025",
+      "category": "レポートとデータ出力",
+      "function_name": "発送データ出力",
+      "description": "発送データを出力する機能。",
+      "input": "出力条件",
+      "output": "発送データ",
+      "user": "定期購読管理システムの管理者"
+    },
+    {
+      "id": "FUN-026",
+      "category": "レポートとデータ出力",
+      "function_name": "定期元帳出力",
+      "description": "定期元帳をデータ出力する機能。",
+      "input": "出力条件",
+      "output": "定期元帳データ",
+      "user": "定期購読管理システムの管理者"
+    },
+    {
+      "id": "FUN-027",
+      "category": "顧客管理",
+      "function_name": "顧客情報登録・修正",
+      "description": "顧客情報を登録、修正する機能。",
+      "input": "顧客情報",
+      "output": "顧客ID",
+      "user": "顧客対応担当者"
+    },
+    {
+      "id": "FUN-028",
+      "category": "顧客管理",
+      "function_name": "特別リクエスト履歴管理",
+      "description": "顧客の会計期間調整や発行遅延対応の履歴を記録する機能。",
+      "input": "顧客ID、リクエスト内容",
+      "output": "リクエスト履歴ID",
+      "user": "顧客対応担当者"
+    },
+    {
+      "id": "FUN-029",
+      "category": "商品管理",
+      "function_name": "商品登録・修正",
+      "description": "商品情報を登録、修正する機能。",
+      "input": "商品情報",
+      "output": "商品ID",
+      "user": "定期購読管理システムの管理者"
+    },
+    {
+      "id": "FUN-030",
+      "category": "商品管理",
+      "function_name": "商品マスタ管理",
+      "description": "商品マスタを管理する機能。",
+      "input": "なし",
+      "output": "商品マスタ",
+      "user": "定期購読管理システムの管理者"
+    },
+    {
+      "id": "FUN-031",
+      "category": "商品管理",
+      "function_name": "商品CSV出力",
+      "description": "商品情報をCSV形式で出力する機能。",
+      "input": "出力条件",
+      "output": "商品情報（CSV）",
+      "user": "定期購読管理システムの管理者"
+    },
+    {
+      "id": "FUN-032",
+      "category": "アラート機能",
+      "function_name": "アラート通知",
+      "description": "発行遅延、未発行、都度請求時の未請求、未消込入金などの状況をアラートで通知する機能。",
+      "input": "アラート条件",
+      "output": "アラート通知",
+      "user": "定期購読管理システムの管理者"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "key": "screenTransition",
+  "value": [
+    {
+      "id": "契約管理",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    Login[ログイン画面] --> Menu[メインメニュー]\\n    Menu --> CustomerList[顧客一覧画面]\\n    Menu --> ContractList[契約一覧画面]\\n    CustomerList --> CustomerRegist[顧客情報登録画面]\\n    CustomerList --> CustomerDetail[顧客詳細画面]\\n    CustomerDetail --> CustomerEdit[顧客情報編集画面]\\n    ContractList --> ContractRegist[新規契約登録画面]\\n    ContractList --> ContractDetail[契約詳細画面]\\n    ContractDetail --> ContractEdit[契約情報編集画面]\\n    ContractDetail --> RenewalNotice[契約更新案内作成画面]\\n    ContractDetail --> RenewalRegist[契約更新登録画面]\\n    ContractList --> ContractSearch[契約検索画面]\\n    ContractList --> ContractCheck[契約チェックリスト画面]\"\n}"
+    },
+    {
+      "id": "請求管理",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    請求担当者メニュー --> 請求対象一覧\\n    請求対象一覧 --> 請求書プレビュー\\n    請求書プレビュー --> 請求書一括承認\\n    請求書一括承認 --> 請求書送付記録\\n    請求対象一覧 --> 分割請求設定\\n    分割請求設定 --> 請求スケジュール\\n    請求対象一覧 --> 特別請求設定\\n    特別請求設定 --> 請求スケジュール\\n    請求担当者メニュー --> 未入金一覧\\n    未入金一覧 --> 入金データ消込\\n    入金データ消込 --> 消込承認\\n    消込承認 --> 入金履歴一覧\\n    入金履歴一覧 --> 入金詳細\\n    請求対象一覧 --> 請求履歴一覧\\n    請求履歴一覧 --> 請求詳細\"\n\n}"
+    },
+    {
+      "id": "発行スケジュール管理",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    TOP[発行スケジュール管理TOP] --> SCHEDULE_LIST[発行スケジュール一覧]\\n    SCHEDULE_LIST --> SCHEDULE_REGISTER[発行予定登録画面]\\n    SCHEDULE_LIST --> SCHEDULE_DETAIL[発行スケジュール詳細]\\n    SCHEDULE_DETAIL --> ACTUAL_RECORD[発行実績登録画面]\\n    SCHEDULE_LIST --> UNISSUED_LIST[未発行一覧画面]\\n    UNISSUED_LIST --> CARRY_FORWARD[繰越処理画面]\\n    SCHEDULE_REGISTER --> SCHEDULE_LIST\\n    ACTUAL_RECORD --> SCHEDULE_DETAIL\\n    CARRY_FORWARD --> UNISSUED_LIST\"\n}"
+    },
+    {
+      "id": "発送管理",
+      "value": "{\n  \"mermaid\": \"graph LR\\n    ログイン画面 --> メニュー画面\\n    メニュー画面 --> 発送管理メイン画面\\n    発送管理メイン画面 --> 発送リスト生成画面\\n    発送管理メイン画面 --> 未発送リスト確認画面\\n    発送管理メイン画面 --> 再発送指示画面\\n    発送リスト生成画面 --> 発送リストプレビュー画面\\n    発送リストプレビュー画面 --> 発送リスト出力完了画面\\n    未発送リスト確認画面 --> 未発送詳細画面\\n    未発送詳細画面 --> 再発送指示画面\\n    再発送指示画面 --> 再発送指示完了画面\"\n}"
+    },
+    {
+      "id": "レポートとデータ出力",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    メニュー画面 --> レポート出力画面\\n    レポート出力画面 --> レポート種別選択画面\\n    レポート種別選択画面 --> 契約者一覧表出力条件画面\\n    レポート種別選択画面 --> 売上一覧表出力条件画面\\n    レポート種別選択画面 --> 入金集計表出力条件画面\\n    レポート種別選択画面 --> ラベル出力条件画面\\n    レポート種別選択画面 --> 発送データ出力条件画面\\n    レポート種別選択画面 --> 定期元帳出力条件画面\\n    契約者一覧表出力条件画面 --> ダウンロード画面\\n    売上一覧表出力条件画面 --> ダウンロード画面\\n    入金集計表出力条件画面 --> ダウンロード画面\\n    ラベル出力条件画面 --> ダウンロード画面\\n    発送データ出力条件画面 --> ダウンロード画面\\n    定期元帳出力条件画面 --> ダウンロード画面\\n    ダウンロード画面 --> レポート出力完了画面\"\n}"
+    },
+    {
+      "id": "顧客管理",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    Login[ログイン画面] --> CustomerList[顧客一覧画面]\\n    CustomerList --> CustomerSearch[顧客検索画面]\\n    CustomerList --> CustomerNew[顧客新規登録画面]\\n    CustomerSearch --> CustomerDetail[顧客詳細画面]\\n    CustomerDetail --> CustomerEdit[顧客情報編集画面]\\n    CustomerDetail --> RequestHistory[特別リクエスト履歴画面]\\n    RequestHistory --> RequestNew[特別リクエスト登録画面]\\n    CustomerDetail --> CustomerDelete[顧客削除確認画面]\\n    CustomerNew --> CustomerList\\n    CustomerEdit --> CustomerList\\n    RequestNew --> RequestHistory\"\n}"
+    },
+    {
+      "id": "商品管理",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    Login[ログイン画面] --> Menu[メインメニュー]\\n    Menu --> ProductList[商品一覧画面]\\n    ProductList --> ProductCreate[商品登録画面]\\n    ProductList --> ProductEdit[商品修正画面]\\n    ProductList --> ProductCSV[商品CSV出力画面]\\n    ProductCreate --> ProductConfirm[商品登録確認画面]\\n    ProductEdit --> ProductConfirm\\n    ProductConfirm --> ProductComplete[商品登録完了画面]\\n    ProductCSV --> CSVComplete[CSV出力完了画面]\\n    ProductList --> ProductDetail[商品詳細画面]\\n    ProductComplete --> ProductList\\n    CSVComplete --> ProductList\"\n}"
+    },
+    {
+      "id": "アラート機能",
+      "value": "{\n    \"mermaid\": \"graph LR\\n    ログイン画面 --> メインメニュー\\n    メインメニュー --> アラート設定画面\\n    メインメニュー --> アラート一覧画面\\n    アラート一覧画面 --> アラート詳細画面\\n    アラート詳細画面 --> アラート対応登録画面\\n    アラート設定画面 --> アラート条件設定画面\\n    アラート設定画面 --> アラート通知先設定画面\\n    アラート一覧画面 --> アラートCSV出力画面\\n    アラート詳細画面 --> アラート履歴画面\"\n}"
+    }
+  ]
+}
